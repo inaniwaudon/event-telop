@@ -8,6 +8,8 @@ let rankingNo = 5;
 let bgImg = null;
 let symbolImg = null;
 
+const userAgent = window.navigator.userAgent.toLowerCase();
+
 let texts = [];
 let sideTexts = [];
 let rankingTexts = [];
@@ -49,11 +51,13 @@ class Text {
 		if (!this.drawable) {
 			return;
 		}
+		const y = this.y + (isAffectedAbsoluteY ? getAbsoluteY() : 0)
+			+ (userAgent.indexOf("safari") ? this.size * -0.32 : 0);
 		context.textAlign = this.isLeft ? "left" : "right";
 		context.textBaseline = "top";
 		context.font = `${this.size}px 'Noto Sans JP'`;
 		context.fillStyle = this.fill;
-		context.fillText(this.input.value, this.x, this.y + (isAffectedAbsoluteY ? getAbsoluteY() : 0));
+		context.fillText(this.input.value, this.x, y);
 	}
 
 	displayInput(isAffectedAbsoluteY) {
