@@ -108,7 +108,7 @@ window.onload = async () => {
 	const deepGreen = "#0d292c";
 	const deepDeepGreen = "#021710";
 	const white = "#fff";
-	const white_transparent = "rgba(255,255,255,0.6)"
+	const white_transparent = "rgba(255,255,255,0.8)"
 	
 	// position
 	const telopWidth = 1500;
@@ -188,7 +188,7 @@ window.onload = async () => {
 				width: header.width - 10,
 				height: rankingHeight - 3,
 				fill: white,
-				alpha: 0.8,
+				alpha: 0.6,
 			},
 			{
 				x: telopX - 24,
