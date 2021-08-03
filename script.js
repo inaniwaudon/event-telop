@@ -253,7 +253,7 @@ window.onload = async () => {
 		}
 
 		if (symbolImg) {
-			const padding = 10;
+			const padding = 20;
 			let [x, y] = [padding, padding];
 			let width, height;
 			if (symbolImg.width / symbolImg.height > (symbol.width - padding * 2) / (symbol.height - padding * 2)) {
