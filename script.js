@@ -51,8 +51,9 @@ class Text {
 		if (!this.drawable) {
 			return;
 		}
+		console.log(userAgent);
 		const y = this.y + (isAffectedAbsoluteY ? getAbsoluteY() : 0)
-			+ (userAgent.indexOf("safari") ? this.size * -0.32 : 0);
+			+ (userAgent.indexOf("safari") > -1 && userAgent.indexOf('chrome') < 0 ? this.size * -0.32 : 0);
 		context.textAlign = this.isLeft ? "left" : "right";
 		context.textBaseline = "top";
 		context.font = `${this.size}px 'Noto Sans JP'`;
@@ -322,6 +323,10 @@ window.onload = async () => {
 		}
 	});
 };
+
+const save = () => {
+	window.open(canvas.toDataURL("image/png"));
+}
 
 const changeList = (increases) => {
 	rankingNo += increases ? (rankingNo < 9 ? 1 : 0) : (rankingNo > 1 ? -1 : 0);
