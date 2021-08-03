@@ -108,7 +108,7 @@ window.onload = async () => {
 	const deepGreen = "#0d292c";
 	const deepDeepGreen = "#021710";
 	const white = "#fff";
-	const white_transparent = "rgba(255,255,255,0.8)"
+	const white_transparent = "rgba(255,255,255,0.6)"
 	
 	// position
 	const telopWidth = 1500;
@@ -195,14 +195,14 @@ window.onload = async () => {
 				y,
 				width: 76,
 				height: 40,
-				fill: green
+				fill: deepGreen
 			},
 			{
 				x: header.x,
 				y,
 				width: header.width - 24,
 				height: 6,
-				fill: green
+				fill: deepGreen
 			},
 		]);
 		rankingTexts[i] = [
