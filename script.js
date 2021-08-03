@@ -325,7 +325,8 @@ window.onload = async () => {
 };
 
 const save = () => {
-	window.open(canvas.toDataURL("image/png"));
+	const forSave = document.getElementById("for-save")
+	forSave.src = canvas.toDataURL("image/png");
 }
 
 const changeList = (increases) => {

@@ -17,6 +17,10 @@
 		<a onclick="save()">保存</a>
 	</p>
 	<p>該当箇所をクリックでテキスト・画像を編集。右クリック（スマートフォンの場合は画像を長押し）で画像を保存。</p>
+
+	<h3>保存用</h3>
+	<img id="for-save">
+
 <script src="script.js">
 </script>
 <style>
@@ -69,6 +73,10 @@ p a:hover {
 }
 p a + a {
 	margin-left: 0.4rem;
+}
+img#for-save {
+	width: 100%;
+	max-width: 1000px;
 }
 </style>
 </body>
